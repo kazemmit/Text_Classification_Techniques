@@ -7,7 +7,7 @@ use_pretrain_model_url = 'https://tfhub.dev/google/universal-sentence-encoder-la
 # For example the first sample of a corpus could be like below:"
 # -1 today is a rainy day
 
-corpus_file = 'imdbreviews.txt'
+corpus_file = 'corpus.txt'
 
 # The ratio of all data that should be used for testing purpose
 

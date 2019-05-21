@@ -1,6 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 
-def Traditional_Feature_Extraction(AllText,TrainX,TestX)
+def Traditional_Feature_Extraction(AllText,TrainX,TestX):
     # Feature Extraction
 
     # ****************** Count Vectors as features ******************

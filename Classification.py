@@ -1,5 +1,4 @@
-from sklearn import model_selection, preprocessing
-import pandas, numpy, string,textblob
+from sklearn import svm
 from SNN import create_model_architecture_snn
 from LSTM import create_rnn_lstm
 from BiRNN import create_bidirectional_rnn
@@ -9,6 +8,10 @@ from CNN import create_cnn
 from Parameters import *
 from Traditional_Feature_Extraction import Traditional_Feature_Extraction
 from ReadDataAndPreProcess import ReadDataAndPreProcess
+from Classifier import Classifier_Train_Test
+from NLP_Features import NLP_Features
+
+# All parameters have been defined already in the Parameters.py file
 
 # ****************** Read the samples from a text file, and split them into train and test sets ******************
 
@@ -19,7 +22,13 @@ AllSamplesX,AllSamplesY, TrainX,TrainY,TestX,TestY=ReadDataAndPreProcess(corpus_
 xtrain_count,xtest_count,\
 xtrain_tfidf,xtest_tfidf,\
 xtrain_tfidf_ngram,xtest_tfidf_ngram,\
-xtrain_tfidf_ngram_chars,xtest_tfidf_ngram_chars = Traditional_Feature_Extraction(AlldataDF['text'],TrainX,TestX)
+xtrain_tfidf_ngram_chars,xtest_tfidf_ngram_chars = Traditional_Feature_Extraction(AllSamplesX,TrainX,TestX)
+
+# print(Classifier_Train_Test(svm.SVC(),xtrain_count,TrainY,xtest_count,TestY))
+# print(Classifier_Train_Test(svm.SVC(),xtrain_tfidf,TrainY,xtest_tfidf,TestY))
+# print(Classifier_Train_Test(svm.SVC(),xtrain_tfidf_ngram,TrainY,xtest_tfidf_ngram,TestY))
+# print(Classifier_Train_Test(svm.SVC(),xtrain_tfidf_ngram_chars,TrainY,xtest_tfidf_ngram_chars,TestY))
+
 
 # ****************** Word Embeddings - Pre-train models [Trained on huge data set such as Wiki - We call them universal] ******************
 # Universal Sentence Encoder
