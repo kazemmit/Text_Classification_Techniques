@@ -1,6 +1,6 @@
 from keras import layers, models, optimizers
 
-def create_model_architecture_snn(input_size):
+def create_model_architecture_mlp(input_size):
     # create input layer
     input_layer = layers.Input((input_size,), sparse=True)
 

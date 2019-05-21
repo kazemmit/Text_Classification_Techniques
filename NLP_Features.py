@@ -1,6 +1,6 @@
 import pandas,string,textblob
 
-def NLP_Features(TrainX,TestX):
+def NLP_Features_Extraction(TrainX,TestX):
     Alldata = TrainX+TestX
     AlldataDF = pandas.DataFrame()
     AlldataDF['text'] = Alldata

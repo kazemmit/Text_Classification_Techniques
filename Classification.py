@@ -1,5 +1,5 @@
 from sklearn import svm
-from SNN import create_model_architecture_snn
+from MLP import create_model_architecture_mlp
 from LSTM import create_rnn_lstm
 from BiRNN import create_bidirectional_rnn
 from RCNN import create_rcnn
@@ -9,7 +9,7 @@ from Parameters import *
 from Traditional_Feature_Extraction import Traditional_Feature_Extraction
 from ReadDataAndPreProcess import ReadDataAndPreProcess
 from Classifier import Classifier_Train_Test
-from NLP_Features import NLP_Features
+from NLP_Features import NLP_Features_Extraction
 
 # All parameters have been defined already in the Parameters.py file
 
@@ -64,8 +64,12 @@ pass
 
 
 # ****************** NLP based features ******************
+#NLP_Features = NLP_Features_Extraction(TrainX,TestX)
+
+pass
 
 
+# ****************** Neural Network Techniques (MLP, CNN, LSTM, GRU, RCNN) ******************
 
 
 classifier = create_model_architecture_snn(xtrain_tfidf_ngram.shape[1])
