@@ -25,7 +25,3 @@ def create_cnn():
     return model
 
 
-classifier = create_cnn()
-accuracy = train_model(classifier, train_seq_x, train_y, valid_seq_x, is_neural_net=True)
-print
-"CNN, Word Embeddings", accuracy
