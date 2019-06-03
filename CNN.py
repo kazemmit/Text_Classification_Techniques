@@ -1,4 +1,4 @@
-def create_cnn():
+def create_cnn(word_index,embedding_matrix):
     # Add an Input Layer
     input_layer = layers.Input((70,))
 

@@ -1,6 +1,6 @@
 from keras import layers, models, optimizers
 
-def create_rnn_gru():
+def create_rnn_gru(word_index,embedding_matrix):
     # Add an Input Layer
     input_layer = layers.Input((70,))
 

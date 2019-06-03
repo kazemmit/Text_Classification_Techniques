@@ -1,5 +1,5 @@
 from keras import layers, models, optimizers
-def create_bidirectional_rnn():
+def create_bidirectional_rnn(word_index,embedding_matrix):
     # Add an Input Layer
     input_layer = layers.Input((70,))
 
