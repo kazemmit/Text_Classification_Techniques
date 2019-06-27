@@ -1,6 +1,10 @@
 from keras import layers, models, optimizers
 
 def create_rnn_lstm():
+    '''
+    comments needed
+    :return:
+    '''
     # Add an Input Layer
     input_layer = layers.Input((70,))
 

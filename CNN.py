@@ -1,4 +1,10 @@
 def create_cnn(word_index,embedding_matrix):
+    '''
+    comments needed
+    :param word_index:
+    :param embedding_matrix:
+    :return:
+    '''
     # Add an Input Layer
     input_layer = layers.Input((70,))
 

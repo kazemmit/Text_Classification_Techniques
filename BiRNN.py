@@ -1,5 +1,11 @@
 from keras import layers, models, optimizers
 def create_bidirectional_rnn(word_index,embedding_matrix):
+    '''
+    comments needed
+    :param word_index:
+    :param embedding_matrix:
+    :return:
+    '''
     # Add an Input Layer
     input_layer = layers.Input((70,))
 
